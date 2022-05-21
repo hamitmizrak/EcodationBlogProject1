@@ -5,6 +5,7 @@ import com.hamitmizrak.data.entity.AdminEntity;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
+import java.util.Map;
 
 public interface AdminServices {
 
@@ -25,6 +26,6 @@ public interface AdminServices {
     public ResponseEntity<AdminDto>  updateAdmin(Long id,AdminDto adminDto);
 
     //delete
-    public ResponseEntity<AdminDto> deleteAdmin(Long id);
+    public  ResponseEntity<Map<String,Boolean>> deleteAdmin(Long id);
 
 }
