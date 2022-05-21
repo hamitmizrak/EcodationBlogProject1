@@ -2,6 +2,7 @@ package com.hamitmizrak;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 //security: inactive
 @SpringBootApplication(exclude = {
@@ -9,6 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
         org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration.class
 }
 )
+//Auditing calismasi icin izin
+@EnableJpaAuditing(auditorAwareRef = "auditorAware")
 public class EcodationBlogProject1Application {
 
     public static void main(String[] args) {
