@@ -1,0 +1,34 @@
+ROOT
+GET  ==> http://localhost:8080/api/v1/index
+
+#KAYDET
+POST ==> http://localhost:8080/api/v1/admins
+body>raw>JSON
+{
+    "adminName":"Hamit",
+    "adminEmail":"hamitmizrak@gmail.com",
+    "adminPassword":"root123"
+}
+
+
+#LIST
+GET ==> http://localhost:8080/api/v1/admins
+
+
+#FIND
+GET ==> http://localhost:8080/api/v1/admins/3
+
+
+#GÜNCELLEME
+body>raw>JSON
+PUT ==>  http://localhost:8080/api/v1/admins/1
+{
+
+    "adminName":"Hamit44",
+    "adminEmail":"hamitmizrak@gmail.com44",
+    "adminPassword":"root12344"
+}
+
+
+#DELETE
+DELETE ==> http://localhost:8080/api/v1/admins/2
