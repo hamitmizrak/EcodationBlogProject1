@@ -1,7 +1,7 @@
 package com.hamitmizrak.ui.rest.impl;
 
 import com.hamitmizrak.business.dto.AdminDto;
-import com.hamitmizrak.business.services.AdminServices;
+import com.hamitmizrak.business.services.IAdminServices;
 import com.hamitmizrak.ui.rest.IAdminRest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,7 @@ import java.util.Map;
 public class AdminRest implements IAdminRest {
 
     @Autowired
-    AdminServices adminServices;
+    IAdminServices adminServices;
 
     //ROOT
     //http://localhost:8080/api/v1

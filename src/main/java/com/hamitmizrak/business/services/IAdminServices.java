@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 import java.util.Map;
 
-public interface AdminServices {
+public interface IAdminServices {
 
     //ModelMapper
     public AdminDto EntityToDto(AdminEntity adminEntity);

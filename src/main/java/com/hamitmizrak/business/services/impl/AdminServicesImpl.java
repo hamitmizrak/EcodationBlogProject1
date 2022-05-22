@@ -1,9 +1,9 @@
 package com.hamitmizrak.business.services.impl;
 
 import com.hamitmizrak.business.dto.AdminDto;
-import com.hamitmizrak.business.services.AdminServices;
+import com.hamitmizrak.business.services.IAdminServices;
 import com.hamitmizrak.data.entity.AdminEntity;
-import com.hamitmizrak.data.repository.AdminRepository;
+import com.hamitmizrak.data.repository.IAdminRepository;
 import com.hamitmizrak.exception.ResourceNotFoundException;
 import lombok.extern.log4j.Log4j2;
 import org.modelmapper.ModelMapper;
@@ -19,10 +19,10 @@ import java.util.Map;
 
 @Service
 @Log4j2
-public class AdminServicesImpl implements AdminServices {
+public class AdminServicesImpl implements IAdminServices {
 
     @Autowired
-    AdminRepository adminRepository;
+    IAdminRepository adminRepository;
 
     @Autowired
     ModelMapper modelMapper;
