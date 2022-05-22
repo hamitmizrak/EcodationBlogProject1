@@ -3,54 +3,46 @@ package com.hamitmizrak.data.entity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import java.util.Date;
 
-//lombok
 @Data
-@NoArgsConstructor
 
-//extends
 @MappedSuperclass
-
-//Audit tanımlama
-@EntityListeners((AuditingEntityListener.class))
-
-//Json
-@JsonIgnoreProperties(value="{created_date,update_date}",allowGetters = true)
+@EntityListeners(AuditingEntityListener.class)
+//JSON verisinde gözükmesi istenmeyen anahtarlar belirtilir.
+@JsonIgnoreProperties(value = {"created_date,update_date"},allowGetters = true)
 
 abstract public class BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id",updatable = false)
+    @Column(name = "id",nullable = false,updatable = false)
     private Long id;
 
-
-    //kim ekledi
+    @Column(name = "created_by",nullable = false)
     @CreatedBy
-    @Column(name = "created_by")
     private String createdBy;
 
-    //kim ne zaman ekledi
-    @Column(name="created_date")
+    @Column(name = "created_date",nullable = false,updatable = false)
     @CreatedDate
-    private java.util.Date createdDate;
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdDate;
 
-
-    //kim güncelledi
+    @Column(name = "update_by",nullable = false)
     @LastModifiedBy
-    @Column(name="update_by")
     private String updateBy;
 
-    //kim ne zaman güncelledi
-    @LastModifiedBy
-    @Column(name="update_date")
-    private java.util.Date updatedDate;
-
-
+    @Column(name = "update_date",nullable = false)
+    @Temporal(TemporalType.TIMESTAMP)
+    @LastModifiedDate
+    private Date updateDate;
 }
