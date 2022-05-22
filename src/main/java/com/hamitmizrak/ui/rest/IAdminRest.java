@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 
 public interface IAdminRest {
-
     //SAVE
     AdminDto createAdmin(AdminDto adminDto);
 
@@ -18,7 +17,7 @@ public interface IAdminRest {
     ResponseEntity<AdminDto> getAdminById(Long id);
 
     //UPDATE
-    ResponseEntity<AdminDto> updateAdminDto(Long id, AdminDto AdminDto);
+    ResponseEntity<AdminDto> updateAdminDto(Long id, AdminDto adminDto);
 
     //DELETE
     ResponseEntity<Map<String,Boolean>> deleteAdmin(Long id);
