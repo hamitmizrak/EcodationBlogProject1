@@ -21,7 +21,7 @@ import javax.persistence.*;
 @EntityListeners((AuditingEntityListener.class))
 
 //Json
-@JsonIgnoreProperties(value="{}",allowGetters = true)
+@JsonIgnoreProperties(value="{created_date,update_date}",allowGetters = true)
 
 abstract public class BaseEntity {
 
