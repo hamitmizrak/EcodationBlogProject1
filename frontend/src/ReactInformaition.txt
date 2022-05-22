@@ -1,0 +1,26 @@
+npm i axios --save
+
+
+faker.js
+
+JSX = Html+Javascript
+MVC = View React
+SPA
+
+React = Babel + Webpack + DevServer
+EsLint:syntax hatalarını göstermek
+
+props : bir componentten başka bir componente veri taşımak
+key   :  
+Küçük projeyse: props 
+Orta projeyse : context api
+Büyük projeyse: redux
+
+constructor
+state
+setState
+Bind
+
+JSX 
+class ==> className
+style ==> {{fontSize:"15px"}}
