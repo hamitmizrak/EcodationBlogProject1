@@ -19,7 +19,6 @@ public class AdminRest implements IAdminRest {
     @Autowired
     AdminServices adminServices;
 
-
     //ROOT
     //http://localhost:8080/api/v1
     //http://localhost:8080/api/v1/index
@@ -37,7 +36,6 @@ public class AdminRest implements IAdminRest {
         return adminDto;
     }
 
-
     //LIST
     //http://localhost:8080/api/v1/admins
     @Override
@@ -45,7 +43,6 @@ public class AdminRest implements IAdminRest {
     public List<AdminDto> getAdminList() {
         return adminServices.getAllAdmin();
     }
-
 
     //FIND
     //http://localhost:8080/api/v1/admins/1
@@ -56,7 +53,6 @@ public class AdminRest implements IAdminRest {
         return entity;
     }
 
-
     //UPDATE
     //http://localhost:8080/api/v1/admins/1
     @Override
@@ -65,7 +61,6 @@ public class AdminRest implements IAdminRest {
         adminServices.updateAdmin(id,adminDto);
         return ResponseEntity.ok(adminDto);
     }
-
 
     //DELETE
     //http://localhost:8080/api/v1/admins/1
