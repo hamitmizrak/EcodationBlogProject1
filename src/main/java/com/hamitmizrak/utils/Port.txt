@@ -1,0 +1,5 @@
+Java ==> localhost:8080
+React ==> localhost:3000
+SWAGGER: http://localhost:8080/swagger-ui/index.html
+H2-console: http://localhost:8080/h2-console/
+GitHUB: https://github.com/hamitmizrak/EcodationBlogProject1.git
