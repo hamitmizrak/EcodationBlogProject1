@@ -23,5 +23,4 @@ public class EcodationBlogProject1Application {
 
         SpringApplication.run(EcodationBlogProject1Application.class, args);
     }
-
 }
