@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/")
 @CrossOrigin(origins = "http://localhost:3000")
 public class AdminRest implements IAdminRest {
 
@@ -37,9 +37,9 @@ public class AdminRest implements IAdminRest {
     }
 
     //LIST
-    //http://localhost:8080/api/v1/admins
+    //http://localhost:8080/api/v1/admins/list
     @Override
-    @GetMapping("/admins")
+    @GetMapping("/admins/list")
     public List<AdminDto> getAdminList() {
         return adminServices.getAllAdmin();
     }
