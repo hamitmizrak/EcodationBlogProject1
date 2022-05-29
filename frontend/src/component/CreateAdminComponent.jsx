@@ -2,13 +2,14 @@ import React, { Component } from "react";
 
 import axios from "axios";
 
-export default class CreateEmployeeComponent extends Component {
+export default class CreateAdminComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: "",
-      lastName: "",
-      emailId: "",
+      adminName: "",
+      adminEmail: "",
+      adminPassword:"",
+      adminId: "",
     };
     this.changeFirstName = this.changeFirstName.bind(this);
     this.changeLastName = this.changeLastName.bind(this);

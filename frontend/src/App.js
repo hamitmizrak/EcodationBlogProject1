@@ -1,11 +1,11 @@
 
 import './App.css';
-import ListEmployeeComponent from './component/ListEmployeeComponent';
+import ListAdminComponent from './component/ListAdminComponent';
 
 function App() {
   return (
     <div className="container">
-     <ListEmployeeComponent />
+     <ListAdminComponent />
     </div>
   );
 }

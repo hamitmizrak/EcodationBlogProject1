@@ -4,13 +4,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import './boostrap_data.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Employee from "./Employee";
+import Admin from "./Admin";
 
 
 //<Login />
 ReactDOM.render(
     <React.StrictMode>
-        <Employee/>
+        <Admin/>
     </React.StrictMode>,
     document.getElementById("root")
 );
