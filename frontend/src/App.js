@@ -1,16 +1,20 @@
-import './App.css';
-import FooterComponent from './components/FooterComponent';
-import HeaderComponent from './components/HeaderComponent';
-
+import './App.css'
+import FooterComponent from './components/FooterComponent'
+import HeaderComponent from './components/HeaderComponent'
 
 //rfc ==> TAB
 function App() {
   return (
-<>
-<HeaderComponent/>
-<FooterComponent/>
-</>
-  );
+    <>
+     
+        <HeaderComponent />
+
+      
+
+        <FooterComponent />
+     
+    </>
+  )
 }
 
-export default App;
+export default App
