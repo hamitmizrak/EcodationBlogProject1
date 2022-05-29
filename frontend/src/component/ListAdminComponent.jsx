@@ -19,7 +19,7 @@ export default class ListAdminComponent extends Component {
 
   //ROUTER ADD  PHP
   addAdmin(){
-    this.props.history.push("/add-employee")
+    this.props.history.push("/add-admin")
   }
 
   addList(){

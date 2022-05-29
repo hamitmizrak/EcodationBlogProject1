@@ -15,7 +15,7 @@ function Admin() {
             <Switch>
               <Route path="/" exact component={ListAdminComponent}></Route>
               <Route path="/anasayfa" component={ListAdminComponent}></Route>
-              <Route path="/add-employee" component={CreateAdminComponent}></Route>
+              <Route path="/add-admin" component={CreateAdminComponent}></Route>
               <ListAdminComponent />
             </Switch>
           </div>
